@@ -12,3 +12,4 @@ struct Forecast {
     var imageName: String
     var temperature: Int
 }
+

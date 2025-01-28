@@ -11,6 +11,7 @@
 		5F4994322D36683D004D107C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4994312D36683D004D107C /* ContentView.swift */; };
 		5F4994342D36683E004D107C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F4994332D36683E004D107C /* Assets.xcassets */; };
 		5F4994372D36683E004D107C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F4994362D36683E004D107C /* Preview Assets.xcassets */; };
+		5F67A7732D48D85200A27940 /* ForecastsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F67A7722D48D85200A27940 /* ForecastsViewModel.swift */; };
 		5FEA73E32D3FF66700664B87 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEA73E22D3FF66700664B87 /* Forecast.swift */; };
 		5FEA73E52D3FF6BC00664B87 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEA73E42D3FF6BC00664B87 /* BackgroundView.swift */; };
 /* End PBXBuildFile section */
@@ -21,6 +22,7 @@
 		5F4994312D36683D004D107C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5F4994332D36683E004D107C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F4994362D36683E004D107C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5F67A7722D48D85200A27940 /* ForecastsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastsViewModel.swift; sourceTree = "<group>"; };
 		5FEA73E22D3FF66700664B87 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		5FEA73E42D3FF6BC00664B87 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,6 +59,7 @@
 			children = (
 				5F49942F2D36683D004D107C /* WeatherApp.swift */,
 				5F4994312D36683D004D107C /* ContentView.swift */,
+				5F67A7722D48D85200A27940 /* ForecastsViewModel.swift */,
 				5FEA73E22D3FF66700664B87 /* Forecast.swift */,
 				5FEA73E42D3FF6BC00664B87 /* BackgroundView.swift */,
 				5F4994332D36683E004D107C /* Assets.xcassets */,
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F67A7732D48D85200A27940 /* ForecastsViewModel.swift in Sources */,
 				5F4994322D36683D004D107C /* ContentView.swift in Sources */,
 				5FEA73E32D3FF66700664B87 /* Forecast.swift in Sources */,
 				5FEA73E52D3FF6BC00664B87 /* BackgroundView.swift in Sources */,

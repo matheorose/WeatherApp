@@ -10,14 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var isNight: Bool = false
-    
-    @State private var forecasts: [Forecast] = [
-        Forecast(dayOfWeek: "MON", imageName: "cloud.sun.fill", temperature: 20),
-        Forecast(dayOfWeek: "TUE", imageName: "cloud.sun.fill", temperature: 10),
-        Forecast(dayOfWeek: "WED", imageName: "cloud.sun.fill", temperature: 0),
-        Forecast(dayOfWeek: "THU", imageName: "cloud.sun.fill", temperature: 2),
-        Forecast(dayOfWeek: "FRI", imageName: "cloud.sun.fill", temperature: 10)
-    ]
+    @EnvironmentObject var forecastsVM: ForecastsViewModel
     
     var body: some View {
         ZStack{
@@ -31,7 +24,7 @@ struct ContentView: View {
                         .foregroundStyle(.white)
                     
                     Button {
-                        reloadTemperature()
+                        forecastsVM.reloadTemperature()
                     }label: {
                         Image(systemName: "arrow.clockwise.circle")
                             .font(.title)
@@ -51,11 +44,11 @@ struct ContentView: View {
                     .padding(.bottom, 40)
                 
                 HStack(spacing:20) {
-                    WeatherDayView(forecast: forecasts[0])
-                    WeatherDayView(forecast: forecasts[1])
-                    WeatherDayView(forecast: forecasts[2])
-                    WeatherDayView(forecast: forecasts[3])
-                    WeatherDayView(forecast: forecasts[4])
+                    WeatherDayView(forecast: forecastsVM.forecasts[0])
+                    WeatherDayView(forecast: forecastsVM.forecasts[1])
+                    WeatherDayView(forecast: forecastsVM.forecasts[2])
+                    WeatherDayView(forecast: forecastsVM.forecasts[3])
+                    WeatherDayView(forecast: forecastsVM.forecasts[4])
                 }
                 
                 Spacer()
@@ -75,11 +68,7 @@ struct ContentView: View {
         }
     }
     
-    func reloadTemperature(){
-        for i in 0..<forecasts.count {
-            forecasts[i].temperature += 1
-        }
-    }
+    
 }
 
 struct WeatherDayView: View {
@@ -106,4 +95,5 @@ struct WeatherDayView: View {
 
 #Preview {
     ContentView()
+        .environmentObject(ForecastsViewModel())
 }
